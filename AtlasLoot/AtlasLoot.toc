@@ -1,4 +1,4 @@
-## Interface: 100002
+## Interface: 110000
 ## Author: Lag, Proteyer, Arith
 ## Version: v8.13.14
 ## SavedVariables: AtlasLootDB

@@ -1,4 +1,4 @@
-## Interface: 100002
+## Interface: 110000
 ## Author: Crutchie	
 ## Version: v0.1
 ## Dependencies: AtlasLoot
