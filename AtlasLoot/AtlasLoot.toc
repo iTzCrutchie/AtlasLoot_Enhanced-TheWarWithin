@@ -1,0 +1,120 @@
+## Interface: 100002
+## Author: Lag, Proteyer, Arith
+## Version: v8.13.14
+## SavedVariables: AtlasLootDB
+## SavedVariablesPerCharacter: AtlasLootCharDB
+## OptionalDeps: LibStub, CallbackHandler-1.0, LibSharedMedia-3.0, LibDBIcon-1.0, LibDialog-1.0, LibBabble-ItemSet-3.0, LibBabble-Boss-3.0, LibBabble-Faction-3.0
+
+#@non-debug@
+## Title: AtlasLoot |cFF22B14C[Core]|r
+## Title-deDE: AtlasLoot |cFF22B14C[Kern]|r
+## Title-esES: AtlasLoot |cFF22B14C[Base]|r
+## Title-frFR: AtlasLoot |cFF22B14C[Core]|r
+## Title-koKR: AtlasLoot |cFF22B14C[코어]|r
+## Title-ruRU: AtlasLoot |cFF22B14C[Ядро]|r
+## Title-zhCN: AtlasLoot |cFF22B14C[主程序]|r
+## Title-zhTW: AtlasLoot |cFF22B14C[主程式]|r
+## Notes: Shows the possible loot from the bosses
+## Notes-deDE: Zeigt mögliche Beute von Bossen
+## Notes-esES: Muestra el posible botin de los jefes finales
+## Notes-esMX: Muestra el posible botín de los jefes
+## Notes-frFR: Montre le butin possible des boss
+## Notes-itIT: Mosta il loot possibile dei boss
+## Notes-koKR: 우두머리에게서 획득 가능한 전리품을 보여줍니다
+## Notes-ruRU: Показывает возможную добычу с боссов
+## Notes-zhCN: 显示副本中的首领与小怪可能掉落的物品
+## Notes-zhTW: 顯示首領與小怪可能掉落的物品，並可查詢各陣營與戰場的獎勵物品、套裝物品等
+#@end-non-debug@
+#@debug@
+# ## Title: AtlasLoot |cFF22B14C[Core]|r
+# ## Title-deDE: AtlasLoot |cFF22B14C[Kern]|r
+# ## Title-koKR: AtlasLoot |cFF22B14C[코어]|r
+# ## Title-ruRU: AtlasLoot |cFF22B14C[Ядро]|r
+# ## Title-zhCN: AtlasLoot |cFF22B14C[主程序]|r
+# ## Title-zhTW: AtlasLoot |cFF22B14C[主程式]|r
+# ## Notes: Shows the possible loot from the bosses
+# ## Notes-deDE: Zeigt mögliche Beute von Bossen
+# ## Notes-esES: Muestra el posible botin de los jefes finales
+# ## Notes-frFR: Montre le butin possible des boss
+# ## Notes-koKR: 우두머리에게서 획득 가능한 전리품을 보여줍니다
+# ## Notes-ruRU: Показывает возможную добычу с боссов
+# ## Notes-zhCN: 显示副本中的首领与小怪可能掉落的物品
+# ## Notes-zhTW: 顯示首領與小怪可能掉落的物品，並可查詢各陣營與戰場的獎勵物品、套裝物品等
+#@end-debug@
+
+## X-eMail: manager@atlasloot.net
+## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus, Dynaletik and many others
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.atlasloot.net
+## X-Embeds: LibStub, LibBabble-ItemSet-3.0, LibBabble-Boss-3.0, CallbackHandler-1.0, LibDataBroker-1.1, LibSharedMedia-3.0, LibDBIcon-1.0, LibDialog-1.0, LibBabble-Faction-3.0
+## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
+
+Libs\embeds.xml
+
+Init.lua
+Constants.lua
+db.lua
+
+Locales\Locales.xml
+
+AtlasLoot.xml
+AtlasLoot.lua
+Loader.lua
+
+
+#Core\StaticPopupDialogs.lua
+Core\SlashCommands.lua
+Core\ClickHandler.lua
+Core\Tooltip.lua
+Core\ItemInfo.lua
+Core\TooltipScan.lua
+Core\EncounterJournal.lua
+Core\ItemQuery.lua
+Data\BonusID_re.lua
+Core\ItemString.lua
+Core\MapPOI.lua
+Core\AtlasIntegration.lua
+Core\WorldMapIntegration.xml
+Core\Transmog.lua
+
+MiniMapButton.lua
+
+Data\Mount.lua
+Data\Token.lua
+Data\Sets.lua
+
+ItemDB\ItemDB.lua
+ItemDB\SoundData.lua
+
+Button\Button.lua
+Button\Item_type.lua
+Button\Link_type.lua
+Button\Achievement_type.lua
+Button\Profession_type.lua
+Button\Dummy_type.lua
+Button\Pet_type.lua
+Button\Mount_type.lua
+Button\Faction_type.lua
+Button\Set_type.lua
+Button\Extra_Price_type.lua
+Button\Extra_Quest_type.lua
+Button\Extra_PvP_type.lua
+Button\Extra_Location_type.lua
+
+GUI\GUI.xml
+GUI\GUI.lua
+GUI\Template_CheckBox.lua
+GUI\Template_Button.lua
+GUI\Template_Select.lua
+GUI\Template_DropDown.lua
+GUI\Template_TextWithBg.lua
+GUI\Template_Model.lua
+GUI\ItemFrame.lua
+GUI\ModelFrame.lua
+GUI\SoundFrame.lua
+GUI\QuickLootFrame.lua
+GUI\SetViewFrame.lua
+
+Addons\Addons.lua
+Addons\BonusRoll.lua

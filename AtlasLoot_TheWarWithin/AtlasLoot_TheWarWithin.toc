@@ -1,0 +1,25 @@
+## Interface: 100002
+## Author: Crutchie	
+## Version: v0.1
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+#@non-debug@
+## Title: AtlasLoot |cFF0099FF[The War Within]|r
+## Notes: AtlasLoot loot tables from The War Within
+#@end-non-debug@
+#@debug@
+# ## Title: AtlasLoot |cFF0099FF[The War Within]|r
+# ## Notes: AtlasLoot loot tables from The War Within
+#@end-debug@
+
+## X-Category: Map
+## X-License: GPL v2
+
+## X-AtlasLoot-LootModule: 1
+
+Core\Core.lua
+Core\Instance.lua
+# Core\Factions.lua
+Core\Collections.lua
+# Core\PvP.lua
