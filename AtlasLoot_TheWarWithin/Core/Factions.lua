@@ -88,7 +88,7 @@ data["DRAGONFACTIONS"] = {
 	}
 }
 ]]
-
+--[[
 data["TWWFACTIONS"] = {
 	name = EXPANSION_NAME10 ,
 	ContentType = FACTION_CONTENT,
@@ -96,4 +96,4 @@ data["TWWFACTIONS"] = {
 
 	}
 }
-
+]]
