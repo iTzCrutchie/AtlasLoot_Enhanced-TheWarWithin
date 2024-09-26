@@ -1,0 +1,49 @@
+## Interface: 100002
+## Author: Lag, Proteyer, Arith	
+## Version: v8.13.14
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+#@non-debug@
+## Title: AtlasLoot |cFF0099FF[World Events]|r
+## Title-deDE: AtlasLoot |cFF0099FF[Weltereignisse]|r
+## Title-esES: AtlasLoot |cFF0099FF[Eventos de mundo]|r
+## Title-frFR: AtlasLoot |cFF0099FF[Évènements Mondiaux]|r
+## Title-koKR: AtlasLoot |cFF0099FF[전역 이벤트]|r
+## Title-ruRU: AtlasLoot |cFF0099FF[Мировые события]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[世界事件]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[世界事件]|r
+## Notes: AtlasLoot loot tables from world events
+## Notes-deDE: AtlasLoot Beuteverzeichnisse für Weltereignisse
+## Notes-esES: Tablas de botín de AtlasLoot de eventos del mundo
+## Notes-frFR: Tables de butin AtlasLoot des Évènements Mondiaux
+## Notes-koKR: AtlasLoot 전역 이벤트 전리품 목록
+## Notes-ruRU: AtlasLoot таблица добычи для мировых событий
+## Notes-zhCN: AtlasLoot 《世界事件》物品信息
+## Notes-zhTW: AtlasLoot 世界事件物品掉落資料庫
+#@end-non-debug@
+#@debug@
+# ## Title: AtlasLoot |cFF0099FF[World Events]|r
+# ## Title-deDE: AtlasLoot |cFF0099FF[Weltereignisse]|r
+# ## Title-koKR: AtlasLoot |cFF0099FF[전역 이벤트]|r
+# ## Title-ruRU: AtlasLoot |cFF0099FF[Мировые события]|r
+# ## Title-zhCN: AtlasLoot |cFF0099FF[世界事件]|r
+# ## Title-zhTW: AtlasLoot |cFF0099FF[世界事件]|r
+# 
+# ## Notes: AtlasLoot loot tables from world events
+# ## Notes-deDE: AtlasLoot Beuteverzeichnisse für Weltereignisse
+# ## Notes-frFR: Tables de butin AtlasLoot des Évènements Mondiaux
+# ## Notes-koKR: AtlasLoot 전역 이벤트 전리품 목록
+# ## Notes-ruRU: AtlasLoot таблица добычи для мировых событий
+# ## Notes-zhCN: AtlasLoot 《世界事件》物品信息
+# ## Notes-zhTW: AtlasLoot 世界事件物品掉落資料庫
+#@end-debug@
+
+## X-eMail: manager@atlasloot.net
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.atlasloot.net
+
+## X-AtlasLoot-LootModule: 1
+
+data.lua

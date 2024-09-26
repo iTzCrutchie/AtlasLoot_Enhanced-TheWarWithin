@@ -20,6 +20,6 @@
 
 Core\Core.lua
 Core\Instance.lua
-# Core\Factions.lua
+Core\Professions.lua
 Core\Collections.lua
 # Core\PvP.lua

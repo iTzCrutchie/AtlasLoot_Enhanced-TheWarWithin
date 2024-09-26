@@ -111,6 +111,31 @@ local THEWARWITHIN_RAID_HERO_AC_TABLE = {	--[Glory of the Nerub-ar Raider]
 	},
 }
 
+local TheWarWithin_Patterns = { -- Patterns/Formulas
+	name = AL["Patterns/Plans"],
+	ExtraList = true,
+
+	[NORMAL_DIFF] = {
+
+		{ 1, 223048 }, -- Plans: Siphoning Stiletto
+
+		{ 3, 223097 }, -- Pattern: Adrenal Surge Clasp
+
+		{ 5, 226190 }, -- Recipe: Sticky Sweet Treat
+
+		{ 7, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
+		{ 8, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
+		{ 9, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
+		{ 10, 223144 }, -- Formula: Enchant Weapon - Authority of the Depths
+
+		{ 12, 223094 }, -- Design: Magnificient Jewler's Setting
+
+		{ 14, 224435 }, -- Pattern: Duskthread Lining
+
+	}
+
+}
+
 --	---------	--
 --	Instances	--
 --	---------	--
@@ -182,6 +207,9 @@ data["Ara-Kara, City of Echoes"] = {
 				GetItemsFromDiff = NORMAL_DUNGEON_DIFF,
 			},
 		},
+
+		TheWarWithin_Patterns,
+		
 	}
 }
 
@@ -218,15 +246,11 @@ data["Nerub-ar"] = {
                 { 17, 219915 }, -- Foul Behemoth's Chelicera
                 { 18, 212446 }, -- Royal Emblem of Nerub-ar
 
-                { 20, 212388 }, --Ulgrax's Morsel-Masher
-                { 21, 212409 }, --Venom-Etched Claw
-
-                { 23, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
-                { 24, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
-                { 25, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
+                { 20, 212388 }, -- Ulgrax's Morsel-Masher
+                { 21, 212409 }, -- Venom-Etched Claw
 
 				{ 29, 211297 }, -- Fractured Spark of Omens
-				{ 30, 220737 }, --Storm Spirit
+				{ 30, 220737 }, -- Storm Spirit
 			},
 			[NORMAL_RAID_DIFF] = {
 				GetItemsFromDiff = RF_DIFF
@@ -261,8 +285,6 @@ data["Nerub-ar"] = {
 
                 { 20, 212395 }, -- Blood-Kissed Kukri
                 { 21, 212404 }, -- Scepter of Manifested Miasma
-
-                { 23, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
 
 				{ 29, 211297 }, -- Fractured Spark of Omens
 				{ 30, 220737 }, -- Storm Spirit
@@ -301,12 +323,7 @@ data["Nerub-ar"] = {
 				{ 16, 225618 }, -- Dreadful Stalwart's Emblem
 				{ 17, 225619 }, -- Mystic Stalwart's Emblem
 				{ 18, 225620 }, -- Venerated Stalwart's Emblem
-				{ 19, 225621 }, -- Zenith Stalwart's Emblem
-
-				{ 21, 223097 }, -- Pattern: Adrenal Surge Clasp				
-				{ 22, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
-				{ 23, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
-				{ 24, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
+				{ 19, 225621 }, -- Zenith Stalwart's Emblem		
 
 				{ 29, 211297 }, -- Fractured Spark of Omens
 			},
@@ -346,7 +363,6 @@ data["Nerub-ar"] = {
 				{ 18, 225632 }, -- Venerated Obscenity's Idol
 				{ 19, 225633 }, -- Zenith Obscenity's Idol
 
-				{ 21, 224435 }, -- Pattern: Duskthread Lining
 			},
 			[NORMAL_RAID_DIFF] = {
 				GetItemsFromDiff = RF_DIFF,
@@ -383,11 +399,6 @@ data["Nerub-ar"] = {
 				{ 17, 225615 }, -- Mystic Blasphemer's Effigy
 				{ 18, 225616 }, -- Venerated Blasphemer's Effigy
 				{ 19, 225617 }, -- Zenith Blasphemer's Ephigy
-
-				{ 21, 226190 }, -- Recipe: Sticky Sweet Treat
-				{ 22, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
-				{ 23, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
-				{ 24, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
 
 				{ 29, 211297 }, -- Fractured Spark of Omens
 				{ 30, 220737 }, -- Storm Spirit
@@ -428,9 +439,6 @@ data["Nerub-ar"] = {
 				{ 18, 225628 }, -- Venerated Slayer Icon
 				{ 19, 225629 }, -- Zenith Slayer Icon
 
-				{ 21, 223048 }, -- Plans: Siphoning Stiletto
-
-
 			},
 			[NORMAL_RAID_DIFF] = {
 				GetItemsFromDiff = RF_DIFF,
@@ -468,9 +476,6 @@ data["Nerub-ar"] = {
 				{ 18, 225624 }, -- Venerated Conniver's Badge
 				{ 19, 225625 }, -- Zenith Conniver's Badge
 
-				{ 21, 223094 }, -- Design: Magnificient Jewler's Setting
-
-
 			},
 			[NORMAL_RAID_DIFF] = {
 				GetItemsFromDiff = RF_DIFF,
@@ -507,8 +512,6 @@ data["Nerub-ar"] = {
 				{ 17, 212401 }, -- Ansurek's Final Judgement
 				{ 18, 212394 }, -- Sovereign's Disdain
 
-				{ 21, 223144 }, -- Formula: Enchant Weapon - Authority of the Depths
-
 				{ 25, 225634 }, -- Web-Wrapped Curio
 
 				{ 30, 224147, "mount" }, -- Reins of the Sureki Skyrazor
@@ -530,6 +533,7 @@ data["Nerub-ar"] = {
 		{ -- Trash BOE Drops
 
 			name = AL["Trash Mobs"],
+			ExtraList = true,
 
 			[RF_DIFF] = {
 
@@ -560,6 +564,7 @@ data["Nerub-ar"] = {
 			},
 		},
 
+		TheWarWithin_Patterns,
     	THEWARWITHIN_RAID_HERO_AC_TABLE
 
     }
