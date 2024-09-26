@@ -92,7 +92,9 @@ local AC_ITTYPE = data:AddItemTableType("Achievement", "Item")
 local DUNGEON_CONTENT = data:AddContentType(AL["Dungeons"], ATLASLOOT_DUNGEON_COLOR)
 local RAID_CONTENT = data:AddContentType(AL["Raids"], ATLASLOOT_RAID_COLOR)
 
--- Shared loot tables
+-- 	------------------	--
+--	Shared Loot Tables	--
+--	------------------	--
 local THEWARWITHIN_RAID_HERO_AC_TABLE = {	--[Glory of the Nerub-ar Raider]
 	name = select(2, GetAchievementInfo(40232)),
 	TableType = AC_ITTYPE,
@@ -109,9 +111,12 @@ local THEWARWITHIN_RAID_HERO_AC_TABLE = {	--[Glory of the Nerub-ar Raider]
 	},
 }
 
--- /////////////////////////////////
--- Instance
--- /////////////////////////////////
+--	---------	--
+--	Instances	--
+--	---------	--
+
+
+
 --[[
 data["InstanceName"] = {
 	EncounterJournalID = 111,
@@ -129,12 +134,14 @@ data["InstanceName"] = {
 }
 ]]
 
--- Dungeons
+--	--------	--
+--	Dungeons	--
+--	--------	--
 
 data["Ara-Kara, City of Echoes"] = {
 	EncounterJournalID = 1271,
 	MapID = 2357,
-	AtlasMapID = "Arakara",
+	--AtlasMapID = "Arakara",
 	ContentType = DUNGEON_CONTENT,
 	items = 
 	{
@@ -179,19 +186,21 @@ data["Ara-Kara, City of Echoes"] = {
 }
 
 
--- Raids
+--	---------	--
+--	Raids		--
+--	---------	--
 
 data["Nerub-ar"] = {
 
     EncounterJournalID  = 1273,
     MapID               = 2292,
-    AtlasMapID          = "Nerubar",
+    --AtlasMapID          = "Nerubar",
     ContentType         = RAID_CONTENT,
     items               = {
 
         { -- Ulgrax the Devourer
 			EncounterJournalID = 2607,
-			[NORMAL_RAID_DIFF] = {
+			[RF_DIFF] = {
 
                 { 1, 212419 }, -- Bile-Soaked Harness
                 { 2, 212426 }, -- Crunchyy Intruder's Wristband
@@ -212,7 +221,15 @@ data["Nerub-ar"] = {
                 { 20, 212388 }, --Ulgrax's Morsel-Masher
                 { 21, 212409 }, --Venom-Etched Claw
 
-                { 23, 220737 }, --Storm Spirit
+                { 23, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
+                { 24, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
+                { 25, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
+
+				{ 29, 211297 }, -- Fractured Spark of Omens
+				{ 30, 220737 }, --Storm Spirit
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF
 			},
 			[HEROIC_PRE_DIFF] = {
 				GetItemsFromDiff = NORMAL_RAID_DIFF,
@@ -220,18 +237,11 @@ data["Nerub-ar"] = {
 			[MYTHIC_PRE_DIFF] = {
 				GetItemsFromDiff = NORMAL_RAID_DIFF,
 			},
-			[RF_DIFF] = {
-				GetItemsFromDiff = NORMAL_RAID_DIFF,
-                { 24, 211297 }, -- Fractured Spark of Omens
-                { 25, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
-                { 26, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
-                { 27, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
-			},
 		},
         { -- The Bloodbound Horror
 
             EncounterJournalID = 2611,
-            [NORMAL_RAID_DIFF] = {
+            [RF_DIFF] = {
 
                 { 1, 212430 }, -- Shattered Eye Cincture
                 { 2, 212439 }, -- Beacons of the False Dawn
@@ -252,7 +262,13 @@ data["Nerub-ar"] = {
                 { 20, 212395 }, -- Blood-Kissed Kukri
                 { 21, 212404 }, -- Scepter of Manifested Miasma
 
-                { 23, 220737 }, -- Storm Spirit
+                { 23, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
+
+				{ 29, 211297 }, -- Fractured Spark of Omens
+				{ 30, 220737 }, -- Storm Spirit
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
 			},
 			[HEROIC_PRE_DIFF] = {
 				GetItemsFromDiff = NORMAL_RAID_DIFF,
@@ -260,16 +276,291 @@ data["Nerub-ar"] = {
 			[MYTHIC_PRE_DIFF] = {
 				GetItemsFromDiff = NORMAL_RAID_DIFF,
 			},
+        },
+		{ -- Sikran, Captain of the Sureki
+
+			EncounterJournalID = 2599,
 			[RF_DIFF] = {
+
+				{ 1, 212416 }, -- Cosmic-tinged Treads
+
+				{ 3, 212445 }, -- Chitin-Spiked Jackboots
+
+				{ 5, 212415 }, -- Throne Defender's Bangles
+
+				{ 7, 212427 }, -- Visor of the Ascended Captain
+
+				{ 9, 212449 }, -- Sikran's Endless Arsenal
+				{ 10, 225577 }, -- Sureki Zealot's Insignia
+
+				{ 12, 212399 }, -- Splintershot Silkbow
+				{ 13, 212405 }, -- Flawless Phase Blade
+				{ 14, 212392 }, -- Duelist's Dancing Steel
+				{ 15, 212413 }, -- Honored Executioner's Perforator
+
+				{ 16, 225618 }, -- Dreadful Stalwart's Emblem
+				{ 17, 225619 }, -- Mystic Stalwart's Emblem
+				{ 18, 225620 }, -- Venerated Stalwart's Emblem
+				{ 19, 225621 }, -- Zenith Stalwart's Emblem
+
+				{ 21, 223097 }, -- Pattern: Adrenal Surge Clasp				
+				{ 22, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
+				{ 23, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
+				{ 24, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
+
+				{ 29, 211297 }, -- Fractured Spark of Omens
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
 				GetItemsFromDiff = NORMAL_RAID_DIFF,
-                { 24, 211297 }, -- Fractured Spark of Omens
-                { 25, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+		},
+
+		{ -- Rasha'nan
+
+			EncounterJournalID = 2609,
+			[RF_DIFF] = {
+
+				{ 1, 212440 }, -- Devotee's Dreadful Headdress
+
+				{ 3, 225583 }, -- Behemoth's Eroded Cinch
+
+				{ 5, 225586 }, -- Rasha'nan's Grotesque Talons
+
+				{ 7, 212437 }, -- Ravaged Lamplighter's Manacles
+
+				{ 9, 212448 }, -- Locket of Broken Memories
+				{ 10, 212453 }, -- Skyterror's Corrosive Organ
+
+				{ 12, 225574 }, -- Wings of Shattered Shadow
+				{ 14, 212398 }, -- Bludgeons of Blistering Wind
+				{ 15, 212391 }, -- Predator's Feasthooks
+
+				{ 16, 225630 }, -- Dreadful Obsenity's Idol
+				{ 17, 225631 }, -- Mystic Obscenity's Idol
+				{ 18, 225632 }, -- Venerated Obscenity's Idol
+				{ 19, 225633 }, -- Zenith Obscenity's Idol
+
+				{ 21, 224435 }, -- Pattern: Duskthread Lining
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+		},
+
+		{ -- Broodtwister Ovi'nax
+
+			EncounterJournalID = 2612,
+			[RF_DIFF] = {
+
+				{ 1, 225582 }, -- Assimilated Eggshell Slippers
+
+				{ 3, 225588 }, -- Sanguine Experiment's Bandages
+
+				{ 5, 225580 }, -- Accelerated Ascension Coil
+
+				{ 7, 212418 }, -- Black Blood Injectors
+
+				{ 9, 225576 }, -- Writhing Ringworm
+				{ 10, 212452 }, -- Gruesome Syringe
+				{ 11, 220305 }, -- Ovi'nax's Mercurial Egg
+
+				{ 13, 212389 }, -- Spire of Transfused Horrors
+				{ 14, 212387 }, -- Broodtwister's Grim Catalyst
+
+				{ 16, 225614 }, -- Dreadful Blasphemer's Effigy
+				{ 17, 225615 }, -- Mystic Blasphemer's Effigy
+				{ 18, 225616 }, -- Venerated Blasphemer's Effigy
+				{ 19, 225617 }, -- Zenith Blasphemer's Ephigy
+
+				{ 21, 226190 }, -- Recipe: Sticky Sweet Treat
+				{ 22, 223123 }, -- Formula: Enchanted Gilded Harbringer Crest
+				{ 23, 223122 }, -- Formula: Enchanted Runed Harbringer Crest
+				{ 24, 223121 }, -- Formula: Enchanted Weathered Harbringer Crest
+
+				{ 29, 211297 }, -- Fractured Spark of Omens
+				{ 30, 220737 }, -- Storm Spirit
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+		},
+
+		{ -- Nexus-Princess Ky'veza
+
+			EncounterJournalID = 2601,
+			[RF_DIFF] = {
+
+				{ 1, 212441 }, -- Binding of the Starless Night
+
+				{ 3, 225591 }, -- Fleeting Massacre Footpads
+
+				{ 5, 225581 }, -- Ky'veza's Covert Clasp
+
+				{ 7, 225589 }, -- Nether Bounty's Greatbelt
+
+				{ 9, 221023 }, -- Treacherous Transmitter
+				{ 10, 212456 }, -- Void Reaper's Contract
+
+				{ 12, 219877 }, -- Void Reaper's Warp Blade
+				{ 13, 212400 }, -- Shade-Touched Silencer
+				{ 14, 225636 }, -- Regicide
+
+				{ 16, 225626 }, -- Dreadful Slayer Icon
+				{ 17, 225627 }, -- Mystic Slayer Icon
+				{ 18, 225628 }, -- Venerated Slayer Icon
+				{ 19, 225629 }, -- Zenith Slayer Icon
+
+				{ 21, 223048 }, -- Plans: Siphoning Stiletto
+
 
 			},
-        },
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+		},
+
+		{ -- The Silken Court
+
+			EncounterJournalID = 2608,
+			[RF_DIFF] = {
+
+				{ 1, 225584 }, -- Skeinspinner's Duplicitous Cuffs
+
+				{ 3, 212432 }, -- Thousand-Scar Implalers
+
+				{ 5, 212429 }, -- Whispering Voidlight Spaulders
+
+				{ 7, 212443 }, -- Shattershell Greaves
+
+				{ 9, 225575 }, -- Silken Advisor's Favor
+				{ 10, 212450 }, -- Swarmlord's Authority
+				{ 11, 220202 }, -- Spymaster's Web
+
+				{ 13, 212407 }, -- Anub'arash's Colossal Mandible
+				{ 14, 212397 }, -- Takazj's Entropic Edict
+
+				{ 16, 225622 }, -- Dreadful Conniver's Badge
+				{ 17, 225623 }, -- Mystic Conniver's Badge
+				{ 18, 225624 }, -- Venerated Conniver's Badge
+				{ 19, 225625 }, -- Zenith Conniver's Badge
+
+				{ 21, 223094 }, -- Design: Magnificient Jewler's Setting
 
 
-        THEWARWITHIN_RAID_HERO_AC_TABLE
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+		},
+
+		{ -- Queen Ansurek
+
+			EncounterJournalID = 2602,
+			[RF_DIFF] = {
+
+				{ 1, 225585 }, -- Acrid Ascendant's Sash
+				{ 2, 212434 }, -- Voidspoken Sarong
+
+				{ 4, 212444 }, -- Frame of Felled Insurgents
+				{ 5, 212433 }, -- Omnivore's Venomous Camouflage
+
+				{ 6, 212436 }, -- Clutches of Paranoia
+				{ 7, 212435 }, -- Liquified Defector's Leggings
+
+				{ 8, 225587 }, -- Devoted Offering's Irons
+				{ 9, 212420 }, -- Quennsguard Carapace
+
+				{ 11, 225578 }, -- Seal of the Poisoned Pact
+				{ 12, 212454 }, -- Mad Queen's Mandate
+
+				{ 16, 225579 }, -- Crest of the Caustic Despot
+				{ 17, 212401 }, -- Ansurek's Final Judgement
+				{ 18, 212394 }, -- Sovereign's Disdain
+
+				{ 21, 223144 }, -- Formula: Enchant Weapon - Authority of the Depths
+
+				{ 25, 225634 }, -- Web-Wrapped Curio
+
+				{ 30, 224147, "mount" }, -- Reins of the Sureki Skyrazor
+
+
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+				{ 29, 224151, "mount" }, -- Reins of the Ascendant Skyrazor
+			},
+		},
+
+		{ -- Trash BOE Drops
+
+			name = AL["Trash Mobs"],
+
+			[RF_DIFF] = {
+
+				{ 1, 225720 }, -- Web Acolyte's Hood
+				{ 2, 225721 }, -- Prime Slime Slippers
+
+				{ 4, 225722 }, -- Adorned Lynxborne Pauldrons
+				{ 5, 225723 }, -- Venom Stalker's Strap
+
+				{ 6, 225724 }, -- Shrillwing Hunter's Prey
+				{ 7, 225725 }, -- Lurking Maurauder's Bindings
+
+				{ 8, 225727 }, -- Captured Earthen's Ironhorns
+				{ 9, 225744 }, -- Heritage Militia's Stompers
+
+				{ 11, 225728 }, -- Acidic Attendant's Loop
+
+
+			},
+			[NORMAL_RAID_DIFF] = {
+				GetItemsFromDiff = RF_DIFF,
+			},
+			[HEROIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+			[MYTHIC_PRE_DIFF] = {
+				GetItemsFromDiff = NORMAL_RAID_DIFF,
+			},
+		},
+
+    	THEWARWITHIN_RAID_HERO_AC_TABLE
 
     }
 }
