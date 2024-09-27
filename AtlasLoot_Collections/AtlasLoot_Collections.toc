@@ -1,0 +1,53 @@
+## Interface: 100002
+## Author: Lag, Proteyer, Arith	
+## Version: v8.13.14
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+## OptionalDeps: 
+
+#@non-debug@
+## Title: AtlasLoot |cFF0099FF[Collections]|r
+## Title-deDE: AtlasLoot |cFF0099FF[Sammlungen]|r
+## Title-esES: AtlasLoot |cFF0099FF[Colecciones]|r
+## Title-frFR: AtlasLoot |cFF0099FF[Collections]|r
+## Title-koKR: AtlasLoot |cFF0099FF[수집품]|r
+## Title-ruRU: AtlasLoot |cFF0099FF[Коллекции]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[收集]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[收藏]|r
+## Notes: AtlasLoot collections loot tables (e.g. Mounts & Pets)
+## Notes-deDE: AtlasLoot Sammlungs-Beuteverzeichnisse (z.B. Reit- und Haustiere)
+## Notes-esES: Tablas de botín de AtlasLoot para colecciones (monturas, mascotas, etc.)
+## Notes-frFR: Tables de butin de collections AtlasLoot (ex. Montures et Mascottes)
+## Notes-koKR: AtlasLoot 수집품 전리품 목록 (탈것 & 애완동물)
+## Notes-ruRU: AtlasLoot таблица коллекции добычи (напр. транспорт и питомцы)
+## Notes-zhCN: AtlasLoot 《收集》物品信息
+## Notes-zhTW: AtlasLoot 收藏物品資料庫
+#@end-non-debug@
+#@debug@
+# ## Title: AtlasLoot |cFF0099FF[Collections]|r
+# ## Title-deDE: AtlasLoot |cFF0099FF[Sammlungen]|r
+# ## Title-koKR: AtlasLoot |cFF0099FF[수집품]|r
+# ## Title-ruRU: AtlasLoot |cFF0099FF[Коллекции]|r
+# ## Title-zhCN: AtlasLoot |cFF0099FF[收集]|r
+# ## Title-zhTW: AtlasLoot |cFF0099FF[收藏]|r
+# 
+# ## Notes: AtlasLoot collections loot tables (e.g. Mounts & Pets)
+# ## Notes-deDE: AtlasLoot Sammlungs-Beuteverzeichnisse (z.B. Reit- und Haustiere)
+# ## Notes-esES: Tablas de botín de AtlasLoot para colecciones (monturas, mascotas, etc.)
+# ## Notes-frFR: Tables de butin de collections AtlasLoot (ex. Montures et Mascottes)
+# ## Notes-koKR: AtlasLoot 수집품 전리품 목록 (탈것 & 애완동물)
+# ## Notes-ruRU: AtlasLoot таблица коллекции добычи (напр. транспорт и питомцы)
+# ## Notes-zhCN: AtlasLoot 《收集》物品信息
+# ## Notes-zhTW: AtlasLoot 收藏物品資料庫
+#@end-debug@
+
+## X-eMail: manager@atlasloot.net
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.atlasloot.net
+## X-Embeds: 
+
+## X-AtlasLoot-LootModule: 1
+
+data.lua
+sets.lua

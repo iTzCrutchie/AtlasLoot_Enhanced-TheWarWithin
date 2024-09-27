@@ -6,6 +6,10 @@ I have simply took fixes from the community and [repsejnworb](https://github.com
 ## Status
 There are still several items that are missing and I will be updating loot and items as I can. This version has all factions, mounts, Nerub-ar, and the upcoming World Events, Brewfest and Hallow's End.
 
+### Installation
+
+Download the code in Zip format. Extract the folders AtlasLoot, AtlasLoot_Collections ,AtlasLoot_Crafting, AtlasLoot_Factions, AtlasLoot_TheWarWithin, and AtlasLoot_WorldEvents and place them into your Interface > Addons folder
+
 
 ### Disclaimer
 I am uploading this to Github for the time being for the community to use an updated AtlasLoot Enhanced. I know there is the Dungeon Journal but AtlasLoot provides more tables than just the dungeons and raids. I am working on this in my free time so some updates may be really fast others may e slow. If you want to contribute, please use issues or pull requests.

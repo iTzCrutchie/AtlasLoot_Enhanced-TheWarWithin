@@ -1,0 +1,50 @@
+## Interface: 100002
+## Author: Lag, Proteyer, Arith	
+## Version: v8.13.14
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+#@non-debug@
+## Title: AtlasLoot |cFF0099FF[Crafting]|r
+## Title-deDE: AtlasLoot |cFF0099FF[Berufe]|r
+## Title-esES: AtlasLoot |cFF0099FF[Profesiones]|r
+## Title-frFR: AtlasLoot |cFF0099FF[Crafting]|r
+## Title-koKR: AtlasLoot |cFF0099FF[전문 기술]|r
+## Title-ruRU: AtlasLoot |cFF0099FF[Создание]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[专业制造]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[商業技能]|r
+## Notes: AtlasLoot loot tables of Crafting Items
+## Notes-deDE: AtlasLoot Verzeichnisse der Berufsgegenstände
+## Notes-esES: Tablas de botín de AtlasLoot para objetos fabricados
+## Notes-frFR: Tables de butin AtlasLoot des Objets Fabriqués
+## Notes-koKR: AtlasLoot 전문 기술의 전리품 목록
+## Notes-ruRU: AtlasLoot таблица добычи на создание предметов
+## Notes-zhCN: AtlasLoot 《专业制造》物品信息
+## Notes-zhTW: AtlasLoot 商業技能物品資料庫
+#@end-non-debug@
+#@debug@
+# ## Title: AtlasLoot |cFF0099FF[Crafting]|r
+# ## Title-deDE: AtlasLoot |cFF0099FF[Berufe]|r
+# ## Title-koKR: AtlasLoot |cFF0099FF[전문 기술]|r
+# ## Title-ruRU: AtlasLoot |cFF0099FF[Создание]|r
+# ## Title-zhCN: AtlasLoot |cFF0099FF[专业制造]|r
+# ## Title-zhTW: AtlasLoot |cFF0099FF[商業技能]|r
+# 
+# ## Notes: AtlasLoot loot tables of Crafting Items
+# ## Notes-deDE: AtlasLoot Verzeichnisse der Berufsgegenstände
+# ## Notes-esES: Tablas de botín de AtlasLoot para objetos fabricados
+# ## Notes-frFR: Tables de butin AtlasLoot des Objets Fabriqués
+# ## Notes-koKR: AtlasLoot 전문 기술의 전리품 목록
+# ## Notes-ruRU: AtlasLoot таблица добычи на создание предметов
+# ## Notes-zhCN: AtlasLoot 《专业制造》物品信息
+# ## Notes-zhTW: AtlasLoot 商業技能物品資料庫
+#@end-debug@
+
+## X-eMail: manager@atlasloot.net
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.atlasloot.net
+
+## X-AtlasLoot-LootModule: 1
+
+data.lua
