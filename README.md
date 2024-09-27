@@ -9,3 +9,5 @@ There are still several items that are missing and I will be updating loot and i
 
 ### Disclaimer
 I am uploading this to Github for the time being for the community to use an updated AtlasLoot Enhanced. I know there is the Dungeon Journal but AtlasLoot provides more tables than just the dungeons and raids. I am working on this in my free time so some updates may be really fast others may e slow. If you want to contribute, please use issues or pull requests.
+
+If Lag123 or the other orignal authors ask me to remove the original AtlasLoot folders I will do so and just provide my updates with the War Within folder
