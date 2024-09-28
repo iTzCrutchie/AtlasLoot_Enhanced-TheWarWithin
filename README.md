@@ -8,7 +8,7 @@ There are still several items that are missing and I will be updating loot and i
 
 ### Installation
 
-Download the code in Zip format. Extract the folders AtlasLoot, AtlasLoot_Collections ,AtlasLoot_Crafting, AtlasLoot_Factions, AtlasLoot_TheWarWithin, and AtlasLoot_WorldEvents and place them into your Interface > Addons folder
+Download the code in Zip format. Extract the folders AtlasLoot, AtlasLoot_Collections, AtlasLoot_Crafting, AtlasLoot_Factions, AtlasLoot_TheWarWithin, and AtlasLoot_WorldEvents and place them into your Interface > Addons folder
 
 
 ### Disclaimer
