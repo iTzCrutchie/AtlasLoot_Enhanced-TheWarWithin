@@ -2,23 +2,26 @@ local addonname = ...
 local AtlasLoot = _G.AtlasLoot
 local data, GetSpellInfo = AtlasLoot.ItemDB:Add(addonname), function(a) local v = C_Spell.GetSpellInfo(a); return v.name, nil, v.iconID; end
 
-local AL = AtlasLoot.Locales
-local ALIL = AtlasLoot.IngameLocales
+local AL 	= AtlasLoot.Locales
+local ALIL 	= AtlasLoot.IngameLocales
 
-local BFA_DIFF = data:AddDifficulty(EXPANSION_NAME7)
-local LEGION_DIFF = data:AddDifficulty(EXPANSION_NAME6)
-local WOD_DIFF = data:AddDifficulty(EXPANSION_NAME5)
-local MOP_DIFF = data:AddDifficulty(EXPANSION_NAME4)
-local CATA_DIFF = data:AddDifficulty(EXPANSION_NAME3)
-local WOTLK_DIFF = data:AddDifficulty(EXPANSION_NAME2)
-local BC_DIFF = data:AddDifficulty(EXPANSION_NAME1)
-local CLASSIC_DIFF = data:AddDifficulty(EXPANSION_NAME0)
-local NORMAL_DIFF = data:AddDifficulty(AL["Normal"])
-local OLD_REMEDIES = data:AddDifficulty(AL["Old Remedies"])
+local TWW_DIFF 		= data:AddDifficulty(EXPANSION_NAME10)
+local DF_DIFF 		= data:AddDifficulty(EXPANSION_NAME9)
+local SL_DIFF 		= data:AddDifficulty(EXPANSION_NAME8)
+local BFA_DIFF 		= data:AddDifficulty(EXPANSION_NAME7)
+local LEGION_DIFF 	= data:AddDifficulty(EXPANSION_NAME6)
+local WOD_DIFF 		= data:AddDifficulty(EXPANSION_NAME5)
+local MOP_DIFF 		= data:AddDifficulty(EXPANSION_NAME4)
+local CATA_DIFF 	= data:AddDifficulty(EXPANSION_NAME3)
+local WOTLK_DIFF 	= data:AddDifficulty(EXPANSION_NAME2)
+local BC_DIFF 		= data:AddDifficulty(EXPANSION_NAME1)
+local CLASSIC_DIFF 	= data:AddDifficulty(EXPANSION_NAME0)
+local NORMAL_DIFF 	= data:AddDifficulty(AL["Normal"])
+local OLD_REMEDIES 	= data:AddDifficulty(AL["Old Remedies"])
 
-local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
-local CRAFTING_ITTYPE = data:AddItemTableType("Item", "Profession")
-local CRAFTING2_ITTYPE = data:AddItemTableType("Profession", "Item")
+local NORMAL_ITTYPE 	= data:AddItemTableType("Item", "Item")
+local CRAFTING_ITTYPE 	= data:AddItemTableType("Item", "Profession")
+local CRAFTING2_ITTYPE 	= data:AddItemTableType("Profession", "Item")
 
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 
@@ -32,6 +35,50 @@ data["Alchemy"] = {
 	items = {
 		{	--AlchemyFlask
 			name = AL["Flasks"],
+
+			[TWW_DIFF] 	= {
+				{ 1, 212281, 430605 }, -- Flask of Alchemical Chaos T1
+				{ 2, 212282, 430605 }, -- Flask of Alchemical Chaos T2
+				{ 3, 212283, 430605 }, -- Flask of Alchemical Chaos T3
+
+				{ 5, 212299, 430612 }, -- Flask of Saving Graces T1
+				{ 6, 212300, 430612 }, -- Flask of Saving Graces T2
+				{ 7, 212301, 430612 }, -- Flask of Saving Graces T3
+				
+				{ 9, 212269, 430601 }, -- Flask of Tempered Aggression T1
+				{ 10, 212270, 430601 }, -- Flask of Tempered Aggression T2
+				{ 11, 212271, 430601 }, -- Flask of Tempered Aggression T3
+
+				{ 14, 212289, 430607 }, -- Vicious Flask of Classical Spirits
+				{ 15, 212292, 430608 }, -- Vicious Flask of Horror
+
+				{ 16, 212278, 430604 }, -- Flask of Tempered Mastery T1
+				{ 17, 212279, 430604 }, -- Flask of Tempered Mastery T2
+				{ 18, 212280, 430604 }, -- Flask of Tempered Mastery T3
+
+				{ 20, 212272, 430602 }, -- Flask of Tempered Swiftness T1
+				{ 21, 212273, 430602 }, -- Flask of Tempered Swiftness T2
+				{ 22, 212274, 430602 }, -- Flask of Tempered Swiftness T3
+
+				{ 24, 212275, 430603 }, -- Flask of Tempered Versatility T1
+				{ 25, 212276, 430603 }, -- Flask of Tempered Versatility T2
+				{ 26, 212277, 430603 }, -- Flask of Tempered Versatility T3
+
+				{ 29, 212295 }, -- Vicious Flask of Manifest Fury
+				{ 30, 212298, 430611 }, -- vicious Flask of the Wrecking Ball
+
+				
+
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 152639, 252351 }, -- Flask of Endless Fathoms
 				{ 2, 152639, 252352 }, -- Flask of Endless Fathoms
@@ -46,6 +93,7 @@ data["Alchemy"] = {
 				{ 21, 152638, 252349 }, -- Flask of the Currents
 				{ 22, 152638, 252350 }, -- Flask of the Currents
 			},
+
 			[LEGION_DIFF] = {
 				{ 1, 127851, 188349 }, -- Spirit Cauldron
 				{ 2, 127851, 188350 }, -- Spirit Cauldron
@@ -63,6 +111,7 @@ data["Alchemy"] = {
 				{ 21, 127850, 188347 }, -- Flask of Ten Thousand Scars
 				{ 22, 127850, 188348 }, -- Flask of Ten Thousand Scars
 			},
+
 			[WOD_DIFF] = {
 				{ 1, 109153, 156569, [PRICE_EXTRA_ITTYPE] = "118700:5", [ATLASLOOT_IT_AMOUNT1] = 5 },	-- Greater Draenic Agility Flask (Sold, Ashran)
 				{ 2, 109155, 156571, [PRICE_EXTRA_ITTYPE] = "118700:5", [ATLASLOOT_IT_AMOUNT1] = 5 },	-- Greater Draenic Intellect Flask (Sold, Ashran)
@@ -73,6 +122,7 @@ data["Alchemy"] = {
 				{ 18, 109152, 156568, [PRICE_EXTRA_ITTYPE] = "118700:1", [ATLASLOOT_IT_AMOUNT1] = 5 },	-- Draenic Stamina Flask (Sold, Ashran)
 				{ 19, 109148, 156564, [PRICE_EXTRA_ITTYPE] = "118700:1", [ATLASLOOT_IT_AMOUNT1] = 5 },	-- Draenic Strength Flask (Sold, Ashran)
 			},
+
 			[MOP_DIFF] = {
 				{ 1, 76086, 114772 },	-- Flask of Falling Leaves : =ds=#sr# 550 : =ds=AtlasLoot["Discovery"]
 				{ 2, 76084, 114769 },	-- Flask of Spring Blossoms : =ds=#sr# 550 : =ds=AtlasLoot["Discovery"]
@@ -80,6 +130,7 @@ data["Alchemy"] = {
 				{ 4, 76085, 114771 },	-- Flask of the Warm Sun : =ds=#sr# 550 : =ds=AtlasLoot["Discovery"]
 				{ 5, 76088, 114773 },	-- Flask of Winter's Bite : =ds=#sr# 550 : =ds=AtlasLoot["Discovery"]
 			},
+
 			[CATA_DIFF] = {
 				{ 1, 58087, 80721 },	-- Flask of the Winds : =ds=#sr# 510 : =ds=AtlasLoot["Trainer"]
 				{ 2, 58088, 80723 },	-- Flask of Titanic Strength : =ds=#sr# 510 : =ds=AtlasLoot["Trainer"]
@@ -87,6 +138,7 @@ data["Alchemy"] = {
 				{ 4, 67438, 94162 },	-- Flask of Flowing Water : =ds=#sr# 500 : =ds=AtlasLoot["Trainer"]
 				{ 5, 58085, 80719 },	-- Flask of Steelskin : =ds=#sr# 500 : =ds=AtlasLoot["Trainer"]
 			},
+
 			[WOTLK_DIFF] = {
 				{ 1, 46377, 53903, [ATLASLOOT_IT_AMOUNT1] = 2 },	-- Flask of Endless Rage : =ds=#sr# 435 : =ds=AtlasLoot["Trainer"]
 				{ 2, 46378, 54213, [ATLASLOOT_IT_AMOUNT1] = 2 },	-- Flask of Pure Mojo : =ds=#sr# 435 : =ds=AtlasLoot["Trainer"]
@@ -94,6 +146,7 @@ data["Alchemy"] = {
 				{ 4, 46376, 53901, [ATLASLOOT_IT_AMOUNT1] = 2 },	-- Flask of the Frost Wyrm : =ds=#sr# 435 : =ds=AtlasLoot["Trainer"]
 				{ 5, 40079, 53899 },	-- Lesser Flask of Toughness : =ds=#sr# 375 : =ds=AtlasLoot["Trainer"]
 			},
+
 			[BC_DIFF] = {
 				{ 1, 75525, 114786 },	-- Alchemist's Flask : =ds=#sr# 300 : =ds=AtlasLoot["Trainer"]
 				{ 3, 22861, 28590, [ATLASLOOT_IT_AMOUNT1] = 2 },	-- Flask of Blinding Light : =ds=#sr# 300 : =ds=AtlasLoot["Discovery"]
@@ -108,6 +161,47 @@ data["Alchemy"] = {
 		},
 		{	--AlchemyPotions
 			name = AL["Potions"],
+
+			[TWW_DIFF] 	= {
+
+				{ 1, 212260, 430598 }, -- Frontline Potion T1
+				{ 2, 212261, 430598 }, -- Frontline Potion T2
+				{ 3, 212262, 430598 }, -- Frontline Potion T3
+
+				{ 5, 212254, 430596 }, -- Grotesque Vial T1
+				{ 6, 212255, 430596 }, -- Grotesque Vial T2
+				{ 7, 212256, 430596 }, -- Grotesque Vial T3
+
+				{ 9, 212266, 430600 }, -- Potion of the Reborn Cheetah T1
+				{ 10, 212267, 430600 }, -- Potion of the Reborn Cheetah T2
+				{ 11, 212268, 430600 }, -- Potion of the Reborn Cheetah T3
+
+				{ 13, 212263, 430599 }, -- Tempered Potion T1
+				{ 14, 212264, 430599 }, -- Tempered Potion T2
+				{ 15, 212265, 430599 }, -- Tempered Potion T3
+
+				{ 16, 212257, 430597 }, -- Potion of Unwavering Focus T1
+				{ 17, 212258, 430597 }, -- Potion of Unwavering Focus T2
+				{ 18, 212259, 430597 }, -- Potion of Unwavering Focus T3
+
+				{ 20, 212251, 430595 }, -- Draught of Shocking Revelations T1
+				{ 21, 212252, 430595 }, -- Draught of Shocking Revelations T2
+				{ 22, 212253, 430595 }, -- Draught of Shocking Revelations T3
+
+				{ 24, 212248, 430594 }, -- Draught of Silent Footfalls T1
+				{ 25, 212249, 430594 }, -- Draught of Silent Footfalls T2
+				{ 26, 212250, 430594 }, -- Draught of Silent Footfalls T3
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 163225, 279165 }, -- Battle Potion of Stamina
 				{ 2, 163225, 279166 }, -- Battle Potion of Stamina
@@ -329,6 +423,41 @@ data["Alchemy"] = {
 		},
 		{	--AlchemyMisc
 			name = AL["Miscellaneous"],
+
+			[TWW_DIFF] 	= {
+
+				{ 1 , 210816, 427185 }, -- Algari Alchemist Stone
+
+				{ 3, 212719, 432962 }, -- Algari Flask Cauldron T1
+				{ 4, 212720, 432962 }, -- Algari Flask Cauldron T2
+				{ 5, 212721, 432962 }, -- Algari Flask Cauldron T3
+
+				{ 7, 212751, 432963 }, -- Algari Potion Cauldron T1
+				{ 8, 212752, 432963 }, -- Algari Potion Cauldron T2
+				{ 9, 212753, 432963 }, -- Algari Potion Cauldron T3
+
+				{ 11, 228401, 462121 }, -- Bubbling Mycobloom Culture T1
+				{ 12, 228402, 462121 }, -- Bubbling Mycobloom Culture T2
+				{ 13, 228403, 462121 }, -- Bubbling Mycobloom Culture T3
+
+				{ 16, 212563, 432204 }, -- Harmonious Horticulture T1
+				{ 17, 212564, 432204 }, -- Harmonious Horticulture T2
+				{ 18, 212565, 432204 }, -- Harmonious Horticulture T3
+
+				{ 20, 228404, 462122 }, -- Petal Powder T1
+				{ 21, 228405, 462122 }, -- Petal Powder T2
+				{ 22, 228406, 462122 }, -- Petal Powder T3
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 162519, 276975 }, -- Mystical Cauldron
 				{ 2, 162519, 276976 }, -- Mystical Cauldron
@@ -415,6 +544,19 @@ data["Alchemy"] = {
 		},
 		{	--AlchemyElixirs
 			name = AL["Elixirs"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				{ 1, 127838, 188310 }, -- Sylvan Elixir
 				{ 2, 127838, 188311 }, -- Sylvan Elixir
@@ -533,6 +675,27 @@ data["Alchemy"] = {
 		},
 		{	--AlchemyTransmute
 			name = AL["Transmutes"],
+
+			[TWW_DIFF] 	= {
+
+				{ 1, 225677 }, -- Gleaming Chaos
+				
+				{ 3, 212514 }, -- Blasphemite
+
+				{ 4, 211803 }, -- Mercurial Transmutagen
+				{ 5, 211802 }, -- Ominous Transmutagen
+				{ 6, 211804 }, -- Volatile Transmutagen
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 152668, 251832 }, -- Transmute: Expulsom
 				{ 3, 152580, 251306 }, -- Transmute: Herbs to Cloth
@@ -654,6 +817,28 @@ data["Alchemy"] = {
 				{ 24, 12808, 17564 },	-- Transmute: Water to Undeath : =ds=#sr# 275 : =ds=AtlasLoot["World Drop"]
 			},
 		},
+		{ -- Tools & Accessories
+
+
+			name = "Tools & Accessories",
+
+			[TWW_DIFF] 	= {
+
+				{ 1, "ui_profession_inscription", nil, GetSpellInfo(90441) },
+				{ 2, 222575, 444206 }, -- Mixing Rod
+				{ 3, 222576, 444207 }, -- Mixing Rod
+
+				{ 5, "ui_profession_tailoring", nil, GetSpellInfo(3908) },
+				{ 6, 222845, 446968 },
+				{ 7, 222850, 446973 },
+
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+		},
 	}
 }
 
@@ -664,6 +849,19 @@ data["Blacksmithing"] = {
 	items = {
 		{	--SmithingArmor
 			name = AL["Armor"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 152811, 253190 }, -- Stormsteel Girdle
 				{ 2, 162465, 253191 }, -- Imbued Stormsteel Girdle
@@ -1283,6 +1481,19 @@ data["Blacksmithing"] = {
 		},
 		{	--SmithingWeaponsShields
 			name = AL["Weapons"].." & "..AL["Shields"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 159857, 269476 }, -- Honorable Combatant's Shanker
 				{ 2, 159857, 269477 }, -- Honorable Combatant's Shanker
@@ -1568,6 +1779,19 @@ data["Blacksmithing"] = {
 		},
 		{	--SmithingMisc
 			name = AL["Miscellaneous"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 152812, 253110 }, -- Monel-Hardened Hoofplates
 				{ 2, 159826, 269064 }, -- Monelite Skeleton Key
@@ -1615,6 +1839,19 @@ data["Blacksmithing"] = {
 		},
 		{	--SmithingTrainingProjects
 			name = AL["Training Projects"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 128777, 183280 }, -- Heated Leystone Bar
 				{ 2, 124393, 184181 }, -- Leystone Slag
@@ -1688,6 +1925,19 @@ data["Blacksmithing"] = {
 		},
 		{	--SmithingRelic
 			name = AL["Relic"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				{ 1, 136685, 209498 }, -- Consecrated Spike
 				{ 2, 136686, 209499 }, -- Flamespike
@@ -1695,8 +1945,21 @@ data["Blacksmithing"] = {
 				{ 4, 136683, 209496 }, -- Terrorspike
 			},
 		},
-				{	--SmithingArmorEnhancement
+		{	--SmithingArmorEnhancement
 			name = AL["Armor Enhancements"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				-- 7.3.0
 				{ 1, 151239, 246098 }, -- Felslate Anchor
@@ -1727,6 +1990,7 @@ data["Blacksmithing"] = {
 		},
 		{	--SmithingWeaponEnhancement
 			name = AL["Weapon Enhancements"],
+
 			[NORMAL_DIFF] = {
 				{ 1, 127731, 187514, [PRICE_EXTRA_ITTYPE] = "109118:60" },	-- Savage Steelforged Essence (Sold, Ashran)
 				{ 2, 127713, 187490, [PRICE_EXTRA_ITTYPE] = "109118:60" },	-- Mighty Steelforged Essence (Sold, Ashran)
@@ -1832,6 +2096,19 @@ data["Enchanting"] = {
 	items = {
 		{	--EnchantingsWeapon
 			name = AL["Weapons"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 159922, 269715 }, -- Honorable Combatant's Sorcerous Scepter
 				{ 2, 159922, 269716 }, -- Honorable Combatant's Sorcerous Scepter
@@ -1846,6 +2123,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingWeaponEnchants
 			name = AL["Weapon Enchants"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 153479, 255129, [ATLASLOOT_IT_AMOUNT1] = "10%" }, -- Weapon Enchant - Torrent of Elements
 				{ 2, 153479, 255130, [ATLASLOOT_IT_AMOUNT1] = "10%" }, -- Weapon Enchant - Torrent of Elements
@@ -1985,6 +2275,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingBracers
 			name = AL["Bracers"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 160328, 271366 }, -- Safe Hearthing
 				{ 2, 160330, 271433 }, -- Cooled Hearthing
@@ -2062,6 +2365,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingGloves
 			name = AL["Gloves"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 159466, 267482 }, -- Zandalari Mining
 				{ 2, 159471, 267498 }, -- Zandalari Crafting
@@ -2131,6 +2447,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingBoots
 			name = AL["Boots"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[MOP_DIFF] = {
 				{ 1, 74718, 104414 },	-- Enchant Boots - Pandaren's Step : =ds=#sr# 575 : =ds=AtlasLoot["Trainer"]
 				{ 2, 74717, 104409 },	-- Enchant Boots - Blurred Speed : =ds=#sr# 550 : =ds=AtlasLoot["Trainer"]
@@ -2181,6 +2510,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingChest
 			name = AL["Chest"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[MOP_DIFF] = {
 				{ 1, 74708, 104395 },	-- Enchant Chest - Glorious Stats : =ds=#sr# 575 : =ds=AtlasLoot["Trainer"]
 				{ 2, 74709, 104397 },	-- Enchant Chest - Superior Stamina : =ds=#sr# 550 : =ds=AtlasLoot["Trainer"]
@@ -2236,6 +2578,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingCloak
 			name = AL["Cloak"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				{ 1, 128549, 190878 }, -- Binding of Agility
 				{ 2, 128549, 191004 }, -- Binding of Agility
@@ -2314,6 +2669,19 @@ data["Enchanting"] = {
 		},		
 		{	--EnchantingNeck
 			name = AL["Neck"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				{ 1, 141910, 228408 }, -- Mark of the Ancient Priestess
 				{ 2, 141910, 228409 }, -- Mark of the Ancient Priestess
@@ -2349,6 +2717,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingRelic
 			name = AL["Relic"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				{ 1, 136689, 209507 }, -- Soul Fibril
 				{ 2, 136691, 209509 }, -- Immaculate Fibril
@@ -2356,6 +2737,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingRing
 			name = AL["Ring"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 153442, 255075, [ATLASLOOT_IT_AMOUNT1] = "9" }, -- Pact of Critical Strike
 				{ 2, 153442, 255098, [ATLASLOOT_IT_AMOUNT1] = "9" }, -- Pact of Critical Strike
@@ -2463,6 +2857,19 @@ data["Enchanting"] = {
 		},
 		{	--EnchantingMisc
 			name = AL["Miscellaneous"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 162110, 278418 }, -- Disenchanting Rod
 			},
@@ -2545,6 +2952,19 @@ data["Engineering"] = {
 	items = {
 		{	--EngineeringArmorWeapons
 			name = AL["Armor"].." & "..AL["Weapons"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 160488, 272056 }, -- AZ3-R1-T3 Synthetic Specs
 				{ 2, 160488, 272057 }, -- AZ3-R1-T3 Synthetic Specs
@@ -2765,6 +3185,19 @@ data["Engineering"] = {
 		},
 		{	--EngineeringDevices
 			name = AL["Devices"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 153573, 256070 }, -- Electroshock Mount Motivator
 				{ 2, 153573, 256071 }, -- Electroshock Mount Motivator
@@ -2789,6 +3222,19 @@ data["Engineering"] = {
 		},
 		{	--EngineeringExplosives
 			name = ALIL["Explosives"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 153494, 255395 }, -- Thermo-Accelerated Plague Spreader
 				{ 2, 153494, 255396 }, -- Thermo-Accelerated Plague Spreader
@@ -2968,6 +3414,19 @@ data["Engineering"] = {
 		},
 		{	--EngineeringMountsPets
 			name = AL["Mounts"].." & "..AL["Pets"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 161134, 274621 }, -- Mecha-Mogul Mk2
 			},
@@ -3063,6 +3522,19 @@ data["Engineering"] = {
 		},
 		{	--EngineeringScopes
 			name = AL["Scopes"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 158203, 265097 }, -- Incendiary Ammunition
 				{ 2, 158203, 265098 }, -- Incendiary Ammunition
@@ -3106,6 +3578,19 @@ data["Engineering"] = {
 		},
 		{	--EngineeringTinker
 			name = AL["Tinker"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[LEGION_DIFF] = {
 				{ 1, 132509, 198972 }, -- Deployable Bullet Dispenser
 				{ 2, 132509, 198999 }, -- Deployable Bullet Dispenser
@@ -3178,6 +3663,19 @@ data["Engineering"] = {
 		},
 		{	--EngineeringMisc
 			name = AL["Miscellaneous"],
+
+			[TWW_DIFF] 	= {
+				
+			},
+
+			[DF_DIFF]	= {
+
+			},
+
+			[SL_DIFF]	= {
+
+			},
+
 			[BFA_DIFF] = {
 				{ 1, 162107, 278411 }, -- Makeshift Azerite Detector
 				{ 16, 162111, 278413 }, -- Monelite Fish Finder

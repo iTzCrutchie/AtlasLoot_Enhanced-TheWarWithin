@@ -14,7 +14,7 @@ local wipe, tab_sort = table.wipe, table.sort
 
 -- WOW
 local CreateFrame = CreateFrame
-local GetItemStats = GetItemStats
+local GetItemStats = C_Item.GetItemStats
 
 -- AtlasLoot
 local ItemQuery = AtlasLoot.ItemQuery:Create()

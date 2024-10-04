@@ -8,8 +8,9 @@ local UnitFactionGroup = UnitFactionGroup
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
-local _, private = ...
+local FOLDER_NAME, private = ...
 local data = private.data
+local addonname = FOLDER_NAME
 -- ---------------- --
 --  AtlasLoot Setup --
 --  --------------- --
